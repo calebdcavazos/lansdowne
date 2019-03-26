@@ -19,6 +19,11 @@
           <div class="col-lg-8 mx-auto">
             <img src="<?php echo get_theme_file_uri('/img/logo.png'); ?>" class="logo-img">
             <p class="text-white-50">Lansdowne is a large, peaceful, friendly neighborhood in Charlotte, North Carolina. It is located about 8 miles southeast of the city center, between Providence and Sardis Roads. Most of the homes were built in the 1960's and 1970's.</p>
+            <p class="text-white-50">Covenants and Restrictions</p>
+            <a href="covenants\LansdowneCovenantsAndRestrictions-1959-Spangler.pdf" target="_blank"><i class="fas fa-file-pdf"></i>1959 Spangler</a>
+            <a href="covenants\LansdowneCovenantsAndRestrictions-1960-Spangler.pdf" target="_blank"><i class="fas fa-file-pdf"></i>1960 Spangler</a>
+            <a href="covenants\LansdowneCovenantsAndRestrictions-1964-Thomason.pdf" target="_blank"><i class="fas fa-file-pdf"></i>1964 Thomason</a>
+            <a href="covenants\LansdowneCovenantsAndRestrictions-1978-PJDevelopment.pdf" target="_blank"><i class="fas fa-file-pdf"></i>1978 PJ Development</a>
           </div>
         </div>
       </div>
