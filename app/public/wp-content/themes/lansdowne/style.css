@@ -691,3 +691,25 @@ footer {
       background-color: grey;
     }
 
+#pageNav {
+  padding-top: 3rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#161616), color-stop(75%, rgba(22, 22, 22, 0.9)), to(rgba(22, 22, 22, 0.8)));
+  background: linear-gradient(to bottom, #161616 0%, rgba(22, 22, 22, 0.9) 75%, rgba(22, 22, 22, 0.8) 100%);
+}
+
+#pageNav a {
+  color: #ffffff;
+}
+
+.page-menu {
+  background-color: rgba(22, 22, 22, 0.8);
+}
+
+#pageNav a:hover {
+  color: #64a19d;
+}
+
+.page-section {
+  padding-top: 4rem;
+}
+
