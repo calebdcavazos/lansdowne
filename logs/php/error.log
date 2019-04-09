@@ -2,3 +2,27 @@
 [14-Jan-2019 03:24:51 UTC] PHP Parse error:  syntax error, unexpected 'wp_enqueue_style' (T_STRING) in /app/public/wp-content/themes/lansdowne/functions.php on line 6
 [24-Feb-2019 20:32:38 UTC] PHP Warning:  Error while sending QUERY packet. PID=2029 in /app/public/wp-includes/wp-db.php on line 1924
 [27-Mar-2019 12:31:02 UTC] PHP Warning:  Error while sending QUERY packet. PID=3007 in /app/public/wp-includes/wp-db.php on line 1924
+[06-Apr-2019 15:21:34 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function register_post_types() in /app/public/wp-content/mu-plugins/lansdowne-post-types.php:16
+Stack trace:
+#0 /app/public/wp-includes/class-wp-hook.php(286): lansdowne_post_types('')
+#1 /app/public/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /app/public/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#3 /app/public/wp-settings.php(467): do_action('init')
+#4 /app/public/wp-config.php(76): require_once('/app/public/wp-...')
+#5 /app/public/wp-load.php(37): require_once('/app/public/wp-...')
+#6 /app/public/wp-admin/admin-ajax.php(22): require_once('/app/public/wp-...')
+#7 {main}
+  thrown in /app/public/wp-content/mu-plugins/lansdowne-post-types.php on line 16
+[06-Apr-2019 15:21:35 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function register_post_types() in /app/public/wp-content/mu-plugins/lansdowne-post-types.php:16
+Stack trace:
+#0 /app/public/wp-includes/class-wp-hook.php(286): lansdowne_post_types('')
+#1 /app/public/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /app/public/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#3 /app/public/wp-settings.php(467): do_action('init')
+#4 /app/public/wp-config.php(76): require_once('/app/public/wp-...')
+#5 /app/public/wp-load.php(37): require_once('/app/public/wp-...')
+#6 /app/public/wp-admin/admin.php(31): require_once('/app/public/wp-...')
+#7 /app/public/wp-admin/edit.php(10): require_once('/app/public/wp-...')
+#8 {main}
+  thrown in /app/public/wp-content/mu-plugins/lansdowne-post-types.php on line 16
+[06-Apr-2019 17:47:04 UTC] PHP Parse error:  syntax error, unexpected '}' in /app/public/wp-content/themes/lansdowne/index.php on line 66

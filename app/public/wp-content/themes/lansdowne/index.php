@@ -21,16 +21,6 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
             </li>
-            <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Resources
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Covenants</a>
-          <a class="dropdown-item" href="#">Newsletter</a>
-          <a class="dropdown-item" href="#">Events</a>
-        </div>
-      </li>
           </ul>
         </div>
       </div>
@@ -41,7 +31,59 @@
       <div class="container d-flex h-100 align-items-center">
         <div class="mx-auto text-center">
           <h1 class="mx-auto my-0 text-uppercase">Welcome to Lansdowne</h1>
-          <h2 class="text-white-50 mx-auto mt-2 mb-5">A Wonderful spot in Charlotte, North Carolina</h2>
+          <h2 class="mx-auto mt-2 mb-5">A Wonderful spot in Charlotte, North Carolina</h2>
+          <div class="resources">
+            
+            <!-- Newsletters Homepage -->
+            <div class="resource-box text-light"><h3>Newsletter</h3>
+            <ul class="resource-list">
+              <?php 
+                $homepageNewsletters = new WP_Query(array(
+                  'posts_per_page' => 3,
+                  'post_type' => 'newsletter'
+                ));
+
+                while($homepageNewsletters->have_posts()) {
+                  $homepageNewsletters->the_post(); ?>
+                  <li><a href="<?php the_permalink(); ?>"><i class="far fa-newspaper resource-logo"></i><?php the_title(); ?></a></li>
+                <?php }
+              ?>
+            </ul>
+            </div>
+
+            <!-- Events Homepage -->
+            <div class="resource-box text-light"><h3>Events</h3>
+            <ul class="resource-list">
+            <?php 
+                $homepageEvents = new WP_Query(array(
+                  'posts_per_page' => 3,
+                  'post_type' => 'event'
+                ));
+
+                while($homepageEvents->have_posts()) {
+                  $homepageEvents->the_post(); ?>
+                  <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+                <?php }
+              ?></ul>
+            </div>
+
+            <!-- Covenants Homepage -->
+            <div class="resource-box text-light"><h3>Covenants</h3>
+            <ul class="resource-list">
+              <?php 
+                $homepageCovenants = new WP_Query(array(
+                  'posts_per_page' => 4,
+                  'post_type' => 'covenant'
+                ));
+
+                while($homepageCovenants->have_posts()) {
+                  $homepageCovenants->the_post(); ?>
+                  <li><a href="<?php the_permalink(); ?>"><i class="fas fa-scroll resource-logo"></i><?php the_title(); ?></a></li>
+                <?php }
+              ?>
+            </ul>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -53,11 +95,7 @@
           <div class="col-lg-8 mx-auto">
             <img src="<?php echo get_theme_file_uri('/img/logo.png'); ?>" class="logo-img">
             <p class="text-white-50">Lansdowne is a large, peaceful, friendly neighborhood in Charlotte, North Carolina. It is located about 8 miles southeast of the city center, between Providence and Sardis Roads. Most of the homes were built in the 1960's and 1970's.</p>
-            <p class="text-white-50">Covenants and Restrictions</p>
-            <a href="covenants\LansdowneCovenantsAndRestrictions-1959-Spangler.pdf" target="_blank"><i class="fas fa-file-pdf"></i>1959 Spangler</a>
-            <a href="covenants\LansdowneCovenantsAndRestrictions-1960-Spangler.pdf" target="_blank"><i class="fas fa-file-pdf"></i>1960 Spangler</a>
-            <a href="covenants\LansdowneCovenantsAndRestrictions-1964-Thomason.pdf" target="_blank"><i class="fas fa-file-pdf"></i>1964 Thomason</a>
-            <a href="covenants\LansdowneCovenantsAndRestrictions-1978-PJDevelopment.pdf" target="_blank"><i class="fas fa-file-pdf"></i>1978 PJ Development</a>
+
           </div>
         </div>
       </div>
