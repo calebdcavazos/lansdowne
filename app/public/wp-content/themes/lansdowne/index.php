@@ -62,7 +62,7 @@
 
                 while($homepageEvents->have_posts()) {
                   $homepageEvents->the_post(); ?>
-                  <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+                  <li><a href="<?php the_permalink(); ?>"><strong><?php the_field('event_date') ?>:</strong><?php the_title(); ?></a></li>
                 <?php }
               ?></ul>
             </div>
